@@ -19,7 +19,7 @@ dag = DAG (
 
 with dag as dag:
         t1 = KubernetesPodOperator(
-                namespace='airflow-config',
+                namespace='airflow-helm-setup',
                 image="alpine",
                 cmds=["/bin/sh", "-ec", "sleep 1000"],
                 name="pod1",
