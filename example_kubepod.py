@@ -23,7 +23,7 @@ dag = DAG (
 
 start = DummyOperator(task_id='start', dag=dag)
 
-trial = KubernetesPodOperator(namespace='default',
+trial = KubernetesPodOperator(namespace='airflow-config',
                      image="alpine",
                      cmds=["/bin/sh", "-ec", "sleep 1000"],
                      name="trial-task",
